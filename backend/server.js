@@ -5,9 +5,15 @@ import connectDB from './config/db.js';
 
 const app = express();
 
+// Middleware
+
+app.use(express.json())
+
 // .env Configuration
 
 dotenv.config();
+
+// Database Configuration
 
 connectDB();
 
