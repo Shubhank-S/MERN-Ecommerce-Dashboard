@@ -6,13 +6,24 @@ function Header() {
     <header className="header">
       <ul className="header_links">
         <li>
-          <NavLink className="links">Register</NavLink>
+          <NavLink to="/" className="links">
+            Home
+          </NavLink>
         </li>
         <li>
-          <NavLink className="links">LOGIN</NavLink>
+          <NavLink to="/register" className="links">
+            Register
+          </NavLink>
         </li>
         <li>
-          <NavLink className="links">Add-Products</NavLink>
+          <NavLink to="/login" className="links">
+            Login
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/add-product" className="links">
+            Add-Products
+          </NavLink>
         </li>
       </ul>
     </header>
