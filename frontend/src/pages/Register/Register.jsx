@@ -22,7 +22,8 @@ function Register() {
           password: password,
         }
       );
-      console.log(result);
+      console.log(result.data);
+      localStorage.setItem("user", JSON.stringify(result.data));
     } catch (error) {
       console.log(`Error is ${error}`);
     }
