@@ -22,4 +22,5 @@
 }
 .active{
     color: aqua;
+    font-weight: bolder;
 }
