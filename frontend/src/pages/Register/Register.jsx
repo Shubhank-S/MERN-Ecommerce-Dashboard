@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "./Register.css";
 
 function Register() {
@@ -8,6 +9,23 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // console.log(name, email, password);
+  };
+
+  const RegisterData = async () => {
+    try {
+      const result = await axios.post(
+        `http://localhost:8080/api/v1/user/register`,
+        {
+          name: name,
+          email: email,
+          password: password,
+        }
+      );
+      console.log(result);
+    } catch (error) {
+      console.log(`Error is ${error}`);
+    }
   };
   return (
     <>
@@ -31,7 +49,7 @@ function Register() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter your password...."
         />
-        <button>Register</button>
+        <button onClick={RegisterData}>Register</button>
       </form>
     </>
   );
