@@ -21,9 +21,18 @@ export const getProduct = async (req, resp) => {
 
 export const getSingleProduct = async (req, resp) => {
     try {
-        const productDetail = await ProductModel.findById({ _id: req.params.id })
-        resp.send(productDetail)
+        const getSingleProduct = await ProductModel.findById({ _id: req.params.id })
+        resp.send(getSingleProduct)
     } catch (error) {
         console.log(error)
+    }
+}
+
+export const updateProduct = async (req,resp) => {
+    try {
+      const updateProduct = await ProductModel.findByIdAndUpdate({_id: req.params.id },req.body,{new:true})
+      resp.send(updateProduct)
+    } catch (error) {
+       console.log(error)
     }
 }
