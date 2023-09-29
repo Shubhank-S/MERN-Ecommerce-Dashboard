@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import Register from "./pages/Register/Register";
+import Error from "./pages/Error/Error";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
           <Route path="/add-product" element={<AddProduct />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element />
-          <Route path="*" element />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>
