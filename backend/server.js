@@ -2,7 +2,6 @@ import express from 'express'
 import dotenv from 'dotenv'
 import UserRoutes from './routes/UserRoutes.js'
 import ProductRoutes from './routes/ProductRoutes.js'
-
 import connectDB from './config/db.js';
 
 const app = express();
@@ -25,10 +24,10 @@ const PORT = process.env.PORT;
 
 // Routes
 
-app.use('/api/v1/user',UserRoutes)
-app.use('/api/v1/product',ProductRoutes)
+app.use('/api/v1/user', UserRoutes)
+app.use('/api/v1/product', ProductRoutes)
 
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
   console.log(`Server Running at Port ${PORT}`)
 })
