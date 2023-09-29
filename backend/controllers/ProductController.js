@@ -9,3 +9,12 @@ export const addProduct= async (req,resp)=>{
     console.log(error)
   }
 }
+
+export const getProduct= async(req,resp)=>{
+try {
+    const findProduct = await ProductModel.find({})
+    resp.send(findProduct)
+} catch (error) {
+    console.log(error)
+}
+}
