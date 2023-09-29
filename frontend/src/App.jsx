@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import Register from "./pages/Register/Register";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/login" element />
           <Route path="*" element />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </main>
   );
