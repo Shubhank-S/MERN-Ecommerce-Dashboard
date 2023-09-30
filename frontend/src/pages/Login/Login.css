@@ -1,4 +1,4 @@
-.register_form{
+.login_form{
     display: flex;
     height: 300px;
     width: 350px;
@@ -9,16 +9,10 @@
     justify-content: center;
     box-shadow: 5px 5px 10px 10px gray;
     border-radius: 10px;
-
 }
-
-.register_input{
+.login_input{
     margin: 5px;
     height: 30px;
     width: 200px;
     text-align: center;
-}
-
-.register_button{
-    margin: 5px;
 }
