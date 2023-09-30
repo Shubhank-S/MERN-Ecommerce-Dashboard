@@ -16,12 +16,6 @@ function Login() {
 
   const LoginData = async () => {
     try {
-      if (!email) {
-        toast.error("Please Provide the Email");
-      }
-      if (!password) {
-        toast.error("Please Provide the Password");
-      }
       const result = await axios.post(
         `http://localhost:8080/api/v1/user/login`,
         {
@@ -46,7 +40,7 @@ function Login() {
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email...."
+          placeholder="Enter your email....."
           className="login_input"
         />
         <input
